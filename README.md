@@ -1,2 +1,2 @@
-#Gastric Bypass Train
-##Sam Cowan, Anna Fang, Sadi Nirloy
+# Gastric Bypass Train
+## Sam Cowan, Anna Fang, Sadi Nirloy
