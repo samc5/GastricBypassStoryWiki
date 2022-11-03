@@ -1,4 +1,5 @@
 cowanS -- 2022-11-01 21:47\n
-Seeded team repo with necessary files
+Seeded team repo with necessary files\n
 cowanS -- 2022-11-02 22:10\n
-
+Uploaded revised head-fake wiki design doc
+Revised design.pdf -> added help page as stretch goal, minor clarity fixes, component map rewritten for legibility, clarity, logic fixes\n
