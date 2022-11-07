@@ -3,3 +3,7 @@ Seeded team repo with necessary files\n
 cowanS -- 2022-11-02 22:10\n
 Uploaded revised head-fake wiki design doc
 Revised design.pdf -> added help page as stretch goal, minor clarity fixes, component map rewritten for legibility, clarity, logic fixes\n
+cowanS -- 2022-11-07 00:11\n
+Revised target ship date to Monday 11-14-2022 (6 day postponement). More consistent with other teams and lets us sleep a little more. Reflected this change in design doc
+Created several HTML templates with placeholders for database information
+Created wide set of functions that create and edit the necessary database information\n
