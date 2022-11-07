@@ -7,3 +7,5 @@ cowanS -- 2022-11-07 00:11\n
 Revised target ship date to Monday 11-14-2022 (6 day postponement). More consistent with other teams and lets us sleep a little more. Reflected this change in design doc
 Created several HTML templates with placeholders for database information
 Created wide set of functions that create and edit the necessary database information\n
+FangA -- 2022-11-07 13:05\n
+Pushed HTML files and sqlite files to the repo (Sam had to add all my HTML because we forgot to add each other as collaborators :() \n
