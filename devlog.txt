@@ -8,4 +8,6 @@ Revised target ship date to Monday 11-14-2022 (6 day postponement). More consist
 Created several HTML templates with placeholders for database information
 Created wide set of functions that create and edit the necessary database information\n
 FangA -- 2022-11-07 13:05\n
-Pushed HTML files and sqlite files to the repo (Sam had to add all my HTML because we forgot to add each other as collaborators :() \n
+Pushed HTML files and sqlite files to the repo (Sam had to add all my HTML because we forgot to add each other as collaborators :()\n
+FangA -- 2022-11-09 12:42\n
+Pulled tester python file from [the-repo-of-storing- (personal repository) to demo the code that we have
