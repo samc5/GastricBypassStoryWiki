@@ -1,13 +1,39 @@
-cowanS -- 2022-11-01 21:47\n
-Seeded team repo with necessary files\n
-cowanS -- 2022-11-02 22:10\n
+Gastric Bypass Train
+Sam Cowan
+Anna Fang
+Sadi Nirloy
+pd 7
+---------------------
+p00: Story wiki
+
+
+ ______   ______   __   __   __       ______   _______     
+/_____/\ /_____/\ /_/\ /_/\ /_/\     /_____/\ /______/\    
+\:::_ \ \\::::_\/_\:\ \\ \ \\:\ \    \:::_ \ \\::::__\/__  
+ \:\ \ \ \\:\/___/\\:\ \\ \ \\:\ \    \:\ \ \ \\:\ /____/\ 
+  \:\ \ \ \\::___\/_\:\_/.:\ \\:\ \____\:\ \ \ \\:\\_  _\/ 
+   \:\/.:| |\:\____/\\ ..::/ / \:\/___/\\:\_\ \ \\:\_\ \ \ 
+    \____/_/ \_____\/ \___/_(   \_____\/ \_____\/ \_____\/ 
+==============================================================
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+samC -- 2022-11-01 21:47
+Seeded team repo with necessary files
+
+samC -- 2022-11-02 22:10
 Uploaded revised head-fake wiki design doc
-Revised design.pdf -> added help page as stretch goal, minor clarity fixes, component map rewritten for legibility, clarity, logic fixes\n
-cowanS -- 2022-11-07 00:11\n
+Revised design.pdf -> added help page as stretch goal, minor clarity fixes, component map rewritten for legibility, clarity, logic fixes
+
+samC -- 2022-11-07 00:11
 Revised target ship date to Monday 11-14-2022 (6 day postponement). More consistent with other teams and lets us sleep a little more. Reflected this change in design doc
 Created several HTML templates with placeholders for database information
-Created wide set of functions that create and edit the necessary database information\n
-FangA -- 2022-11-07 13:05\n
-Pushed HTML files and sqlite files to the repo (Sam had to add all my HTML because we forgot to add each other as collaborators :()\n
-FangA -- 2022-11-09 12:42\n
+Created wide set of functions that create and edit the necessary database information
+
+annaF -- 2022-11-07 13:05
+Pushed HTML files and sqlite files to the repo (Sam had to add all my HTML because we forgot to add each other as collaborators :()
+
+annaF -- 2022-11-09 12:42
 Pulled tester python file from [the-repo-of-storing- (personal repository) to demo the code that we have
+
+samC -- 2022-11-10 00:32
+Wrote the book on installing and running this project
