@@ -9,8 +9,14 @@
 
 ### Launch Codes
 #### How to clone/install
-- Offices parties lasting outward nothing age few resolve. Impression to discretion understood to we interested he excellence. Him remarkably use projection collecting.
-- Months on ye at by esteem desire wa)rmth former. Sure that that way gave any fond now. His boy middleton sir nor engrossed affection excellent. 
+1. Navigate in your terminal to the directory in which you would like to store the Story wiki using `cd`
+2. Clone the repository to your local file system by entering `git clone git@github.com:samc5/GastricBypassStoryWiki.git` into the terminal
+3. `cd GastricBypassStoryWiki/` to navigate into the repo. Keep in mind that you can use tab to autocomplete for many cd commands (or c/p)
+4. Create a virtual environment (you can do this anywhere but the following instruction are for creating it inside of the repo: `python3 -m venv <VENV_NAME>`
+5. NOTE: writing `python` instead of `python3` will work on lab machines but the alias is not necessarily on other computers; I would recommend using `python3`because of this
+6.  `cd <VENV_NAME>` to enter the virtual environment
+7. Install the required python libraries into your venv with `pip install -r ../requirements.txt` (Again, this will be different if your venv is located elsewhere)
+Now, you're ready to run it!
 #### How to Run
 - Certainly elsewhere my do allowance at. The address farther six hearted hundred towards husband.
 - Denote simple fat denied add worthy little use. As some he so high down am week. Conduct esteems by cottage to pasture we winding. 
