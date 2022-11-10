@@ -21,7 +21,12 @@ def home_page():
     #print(request.form)
     notice = ""
     if ("login" in request.form):
-        print ("Logging in " + request.form["username"])
+        #print ("Logging in " + request.form["username"])
+        if (tbl_hndl.checkLogin( request.form["username"],  request.form["password"])):
+            notice = "Logged In"
+        else: 
+            notice = "Wrong Username or Password"
+
     if ("register" in request.form):
         if (not tbl_hndl.register( request.form["username"],  request.form["password"])):
             notice = "Username Taken"
