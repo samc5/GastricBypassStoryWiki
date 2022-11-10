@@ -18,11 +18,9 @@
 7. Install the required python libraries into your venv with `pip install -r ../requirements.txt` (Again, this will be different if your venv is located elsewhere)
 ##### Now, you're ready to run it!
 #### How to Run
-- Certainly elsewhere my do allowance at. The address farther six hearted hundred towards husband.
-- Denote simple fat denied add worthy little use. As some he so high down am week. Conduct esteems by cottage to pasture we winding. 
+1. In your terminal type `python3 ../__init__.py`. This will run the main flask app.
+2. Among the many items of feedback this provides you is `Running on http://127.0.0.1:5000`. Copy the link posted within into the URL bar of any browser. 
+3. You can now navigate the website. Feel free to place your terminal in a corner of the screen to see some of the output put out when you fill out a form
 
 ##### Broad Progress Meter:
 [⣿⣿⣿⣿⣿⣿⣿⣿⣦⣀⣀⣀⣀] - INCOMPLETE BUT ON SCHEDULE
-
-
-[Random ipsum](https://randomtextgenerator.com/)
