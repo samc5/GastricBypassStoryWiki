@@ -16,7 +16,7 @@
 - Denote simple fat denied add worthy little use. As some he so high down am week. Conduct esteems by cottage to pasture we winding. 
 
 ##### Broad Progress Meter:
-⣿⣿⣿⣿⣿⣿⣦⣀⣀⣀⣀⣀⣀ - INCOMPLETE BUT ON SCHEDULE
+[⣿⣿⣿⣿⣿⣿⣦⣀⣀⣀⣀⣀⣀] - INCOMPLETE BUT ON SCHEDULE
 
 
 [Random ipsum](https://randomtextgenerator.com/)
