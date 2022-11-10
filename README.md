@@ -5,7 +5,7 @@
 - This app shows off the capabilities of a wiki through a fun story-writing game.
 - Users can create account(s) and log in, with a flask session storing their login info for future visits
 - User can create a story or add to an existing story (ONE TIME PER STORY), which stores entry into the local sqlite3 database shared by all users on a machine
-- Flask HTML templates allow information pulled from the database to be displayed on the website
+- Flask HTML templates pull information from the database to be displayed on the website
 
 ### Launch Codes
 #### How to clone/install
