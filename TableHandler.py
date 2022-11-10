@@ -109,9 +109,19 @@ start_story("Sammy the Seal", "is it you, Agnes?", "sydHoff")
 print(user_check("sydHoff",0))
 addToStory(0,"No, Mrs. Jackson.","sydHoff (parody)")
 addToStory(0,"Well then who could be barking like a seal?","sydHoff (real)")
+start_story("Sammy the Squirrel", "Sammy the Squirrel?", "sydHoff")
+addToStory(0,"No, Mrs. Jackson.","sydHoff (parody)")
+addToStory(1,"No, Mrs. Jackson.","sydHoff (preal)")
+addToStory(1,"Sammy is on vacation in Bermuda.","sydHoff (parrot)")
+addToStory(1,"Said Agnes.","sydHoff (parody)")
+
+
+
 print(list_of_pages())
 print(story(0))
 print(prevEntry(0))
+print(story(1))
+print(prevEntry(1))
 # #==========================================================
 db.commit() #save changes
 db.close()  #close database
