@@ -16,7 +16,7 @@
 5. NOTE: writing `python` instead of `python3` will work on lab machines but the alias is not necessarily on other computers; I would recommend using `python3`because of this
 6.  `cd <VENV_NAME>` to enter the virtual environment
 7. Install the required python libraries into your venv with `pip install -r ../requirements.txt` (Again, this will be different if your venv is located elsewhere)
-Now, you're ready to run it!
+##### Now, you're ready to run it!
 #### How to Run
 - Certainly elsewhere my do allowance at. The address farther six hearted hundred towards husband.
 - Denote simple fat denied add worthy little use. As some he so high down am week. Conduct esteems by cottage to pasture we winding. 
