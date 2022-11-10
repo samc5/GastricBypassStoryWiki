@@ -15,7 +15,8 @@
 4. Create a virtual environment (you can do this anywhere but the following instruction are for creating it inside of the repo: `python3 -m venv <VENV_NAME>`
 5. NOTE: writing `python` instead of `python3` will work on lab machines but the alias is not necessarily on other computers; I would recommend using `python3`because of this
 6.  `cd <VENV_NAME>` to enter the virtual environment
-7. Install the required python libraries into your venv with `pip install -r ../requirements.txt` (Again, this will be different if your venv is located elsewhere)
+7. Install the required python libraries into your venv with 
+`pip install -r ../requirements.txt` (Again, this will be different if your venv is located elsewhere)
 ##### Now, you're ready to run it!
 #### How to Run
 1. In your terminal type `python3 ../__init__.py`. This will run the main flask app.
