@@ -36,7 +36,7 @@ def entrance():
             notice = "Username Taken"
         else:
             notice = "User Registered. Please Log In."
-    if (len(session) > 0):
+    if ("username" in session and "password" in session):
         return redirect("/homepage")
     return render_template("login_and_register.html", message = notice)
 
@@ -46,6 +46,8 @@ def home_page():
 	matrix = tbl_hndl.list_of_pages()
 	print (matrix)
 	table_form = matrix
+	if ("story" in session):
+		session.pop("story")
 
 	return render_template("landing.html", table = table_form)
 
@@ -56,6 +58,27 @@ def make_story():
 	if (len(title) > 0 and len(text) > 0):
 		tbl_hndl.start_story(title, text, session["username"])
 	return redirect("/homepage")
+
+@app.route("/storypage", methods=["POST", "GET"])
+def storypage():
+	print(session)
+	if (not "story" in session):
+		num = list(request.form)[0]
+		session["story"] = num
+	text = tbl_hndl.story(session["story"])
+	ttle = tbl_hndl.getTitle(session["story"])
+	if (not tbl_hndl.user_check(session["username"], session["story"])):
+		text = tbl_hndl.prevEntry(session["story"])
+		return render_template("edit_story.html", title = ttle, story = text)
+	return render_template("display_story.html", title = ttle, story = text)
+
+@app.route("/submission", methods=["POST", "GET"])
+def submission():
+	print(request.form)
+	print(session)
+	line = request.form["your line"]
+	tbl_hndl.addToStory(session["story"], line, session["username"])
+	return redirect("/storypage")
 
 @app.route("/logout")
 def logout():

@@ -3,11 +3,10 @@ Sam Cowan, Anna Fang, Sadi Nirloy of Gastric Bypass Train
 """
 
 import sqlite3   #enable control of an sqlite database
-
+DB_FILE="discobandit"
 #==========================================================
 def seed(): #Creates login and homepage tables, should be run before anything else (other than clear)
 
-	DB_FILE="discobandit"
 	db = sqlite3.connect(DB_FILE) #open if file exists, otherwise create
 	c = db.cursor()  
 	c.execute("create table if not exists logins(username text primary key, password text not null);")
@@ -18,7 +17,6 @@ def seed(): #Creates login and homepage tables, should be run before anything el
 
 def clear(): #clears homepage and all story tables but not login table. Useful in testing, not so much in actual websites
 
-	DB_FILE="discobandit"
 	db = sqlite3.connect(DB_FILE) #open if file exists, otherwise create
 	c = db.cursor()  
 	c.execute(f'select name from sqlite_master where type = "table" and name = "homepage"')
@@ -34,7 +32,6 @@ def clear(): #clears homepage and all story tables but not login table. Useful i
 
 def register(username, password): #adds user/password to logins table
 
-	DB_FILE="discobandit"
 	db = sqlite3.connect(DB_FILE) #open if file exists, otherwise create
 	c = db.cursor()  	
 	c.execute(f'select count(username) from logins where username = "{username}"')
@@ -52,7 +49,6 @@ def register(username, password): #adds user/password to logins table
 
 def checkLogin(username, password): #checks if password is right
 
-	DB_FILE="discobandit"
 	db = sqlite3.connect(DB_FILE) #open if file exists, otherwise create
 	c = db.cursor()  
 
@@ -69,7 +65,6 @@ def checkLogin(username, password): #checks if password is right
 	return False
 def storyCount(): #counts how many stories on homepage
 
-	DB_FILE="discobandit"
 	db = sqlite3.connect(DB_FILE) #open if file exists, otherwise create
 	c = db.cursor()  
 
@@ -77,10 +72,9 @@ def storyCount(): #counts how many stories on homepage
 	num = c.fetchone()[0]
 	db.commit()
 	db.close()
-	return nu
+	return num
 def list_of_pages(): #2D array of tables on homepage
 
-	DB_FILE="discobandit"
 	db = sqlite3.connect(DB_FILE) #open if file exists, otherwise create
 	c = db.cursor()  
 
@@ -102,7 +96,6 @@ def list_of_pages(): #2D array of tables on homepage
 
 def start_story(title, text, username): #creates a table for the story, adds it to homepage db, puts in the first entry
 
-	DB_FILE="discobandit"
 	db = sqlite3.connect(DB_FILE) #open if file exists, otherwise create
 	c = db.cursor()  	
 	count = storyCount()
@@ -114,26 +107,16 @@ def start_story(title, text, username): #creates a table for the story, adds it 
 
 def user_check(username, idnum): #checks if username has already edited the story
 
-	DB_FILE="discobandit"
-	db = sqlite3.connect(DB_FILE) #open if file exists, otherwise create
-	c = db.cursor()  
-
-	DB_FILE="discobandit"
 	db = sqlite3.connect(DB_FILE) #open if file exists, otherwise create
 	c = db.cursor()  
 	c.execute(f'select 1 from table{idnum} where username = "{username}"')
 	bool = c.fetchone()
-	if bool:
-		db.commit()
-		db.close()
-		return True
 	db.commit()
 	db.close()
-	return False
+	return bool != None
 
 def addToStory(idnum, text, username): #adds new entry to story
 
-	DB_FILE="discobandit"
 	db = sqlite3.connect(DB_FILE) #open if file exists, otherwise create
 	c = db.cursor()  
 	if not user_check(username,idnum):
@@ -148,7 +131,6 @@ def addToStory(idnum, text, username): #adds new entry to story
 
 def getTitle(idnum): #returns title of a story
 
-	DB_FILE="discobandit"
 	db = sqlite3.connect(DB_FILE) #open if file exists, otherwise create
 	c = db.cursor()  
 	c.execute(f'select title from homepage where idnum = {idnum}')
@@ -160,7 +142,6 @@ def getTitle(idnum): #returns title of a story
 
 def story(idnum): #returns string of the entire story
 
-	DB_FILE="discobandit"
 	db = sqlite3.connect(DB_FILE) #open if file exists, otherwise create
 	c = db.cursor()  
 	string = ""
@@ -168,31 +149,33 @@ def story(idnum): #returns string of the entire story
 	c.execute(f'select entrytext from table{idnum}')
 	for i in c.fetchmany(count):
 		string += str(i[0]) + " "
+		print(string)
 	db.commit()
 	db.close()	
 	return string
 def prevEntry(idnum): #returns string of latest entry
 
-	DB_FILE="discobandit"
 	db = sqlite3.connect(DB_FILE) #open if file exists, otherwise create
 	c = db.cursor()  
-	count = entryCount(idnum)
-	c.execute(f'select entrytext from table{idnum} where entrynum = {count - 1}')
+	c.execute(f'select entrytext from table{idnum}')
+	string = c.fetchone()
+	if (not string == None):
+		string = str(string[0])
 	db.commit()
 	db.close()
-	return str(c.fetchone()[0])
+	return string
 
 def entryCount(idnum): #counts entries in a story
 
-	DB_FILE="discobandit"
 	db = sqlite3.connect(DB_FILE) #open if file exists, otherwise create
 	c = db.cursor()  
-	c.execute(f'select count(entrytext) from table{idnum}')
-	count = c.fetchone()[0]
+	c.execute(f'select entrynum from table{idnum}')
+	count = c.fetchall()
+	if (count != None):
+		count = count[-1][0] 
 	db.commit()
 	db.close()
-	return count
-
+	return count + 1
 # #==========================================================
 #clear()
 #seed()
@@ -217,6 +200,5 @@ def entryCount(idnum): #counts entries in a story
 #print(story(1))
 #print(prevEntry(1))
 # #==========================================================
-
 
 
