@@ -157,7 +157,8 @@ def prevEntry(idnum): #returns string of latest entry
 
 	db = sqlite3.connect(DB_FILE) #open if file exists, otherwise create
 	c = db.cursor()  
-	c.execute(f'select entrytext from table{idnum}')
+	count = entryCount(idnum)
+	c.execute(f'select entrytext from table{idnum} where entrynum = {count - 1}')
 	string = c.fetchone()
 	if (not string == None):
 		string = str(string[0])
