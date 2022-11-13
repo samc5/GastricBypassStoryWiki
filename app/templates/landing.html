@@ -12,22 +12,30 @@ Gastric Bypass Train: Sam, Anna, Sadi
 <body>
 <!--view table with stories-->
 <h2>Homepage</h2>
+<form action="/storypage" method="post">
 <table>
   <thead>
     <tr>
       <th>Title</th>
       <th>Link</th>
     </tr>
-    <tr>
-      <td>PLACEHOLDER</td>
-      <td>PLACEHOLDER</td>
-    </tr>
   </thead>
+   {% for row in table %}
+	<tr>
+		<td>
+			{{row[0]}}
+		</td>
+		<td>
+			<input type="submit" value="Go To" name="{{row[1]}}">
+		</td>
+	</tr>
+   {% endfor %}
 </table>
+</form>
 <br>
 <!--area for new story creation-->
 <h2>Create a New Story</h2>
-<form action="/" method="post">
+<form action="/make_story" method="post">
   <input type="text" name="title">
   <br>
   <input type="text" name="opening">

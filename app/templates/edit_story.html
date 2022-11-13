@@ -11,16 +11,16 @@ Gastric Bypass Train: Sam, Anna, Sadi
 </head>
 
 <body>
-	<h2>[PLACEHOLDER] TITLE</h2>
-  <p> [PLACEHOLDER] PREV LINE TEXT</p>
+	<h2>{{title}}</h2>
+  <p>{{story}}</p>
   <br>
   <!-- allow the user to add a new line of text -->
-  <form action="/" method="post">
+  <form action="/submission" method="post">
 		<input type="text" name="your line">
 		<input type="submit">
 	</form>
   <!--button to get back to homepage-->
-  <form action="/return_to_homepage" method="get">
+  <form action="/homepage" method="get">
     <input type="submit" class="return" value="return">
   </form>
 </body>
