@@ -38,5 +38,11 @@ Pulled tester python file from [the-repo-of-storing- (personal repository) to de
 samC -- 2022-11-10 00:32
 Wrote the book on installing and running this project
 
-SadiN -- 2022-11-10 12:49
+sadiN -- 2022-11-10 12:49
 Set up registry and log-in (connected to the database). 
+
+sadiN -- 2022-11-13 10:45
+Updated flask app to bring everything together - all pages now work in conjunction with database - login/registration, homepage, create story, add to story, view story
+Project goals completed, barring bugs
+samC -- 2022-11-13 15:29
+Fixed error of pages displaying the first entry instead of the latest entry. Barring any issues we are done
