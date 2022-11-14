@@ -34,7 +34,8 @@ def register(username, password): #adds user/password to logins table
 
 	db = sqlite3.connect(DB_FILE) #open if file exists, otherwise create
 	c = db.cursor()  	
-	c.execute(f'select count(username) from logins where username = "{username}"')
+	usrnm = (username,)
+	c.execute('select count(username) from logins where username = ?',usrnm)
 	num = c.fetchone()[0]
 	if num == 1:
 		print("uh that username has already been taken") #tell user the username already exists and do this whole thing again
@@ -42,7 +43,8 @@ def register(username, password): #adds user/password to logins table
 		db.close()
 		return False
 	else:
-		c.execute(f'insert into logins values("{username}", "{password}")')
+		info = (username,password)
+		c.execute(f'insert into logins values(?, ?)',info)
 		db.commit()
 		db.close()
 		return True
@@ -51,8 +53,8 @@ def checkLogin(username, password): #checks if password is right
 
 	db = sqlite3.connect(DB_FILE) #open if file exists, otherwise create
 	c = db.cursor()  
-
-	c.execute(f'select password from logins where username = "{username}"')
+	usrnm = (username,)
+	c.execute(f'select password from logins where username = ?',usrnm)
 	pw = c.fetchone()
 	if(not (pw == None)):
 		pw = pw[0]
@@ -100,8 +102,12 @@ def start_story(title, text, username): #creates a table for the story, adds it 
 	c = db.cursor()  	
 	count = storyCount()
 	c.execute(f'create table if not exists table{count}(idnum integer, title text, entrynum integer primary key, entrytext text, username text)')
-	c.execute(f'insert into table{count} values({count},"{title}", 0, "{text}", "{username}")')
-	c.execute(f'insert into homepage values("{title}", {count})')
+	first = (title, text, username)
+	cmd = f'insert into table{count} values({count},?, 0, ?, ?)'
+	c.execute(cmd, first)
+	second = (title,)
+	cmd2 = f'insert into homepage values(?, {count})'
+	c.execute(cmd2, second)
 	db.commit()
 	db.close()
 
@@ -109,7 +115,9 @@ def user_check(username, idnum): #checks if username has already edited the stor
 
 	db = sqlite3.connect(DB_FILE) #open if file exists, otherwise create
 	c = db.cursor()  
-	c.execute(f'select 1 from table{idnum} where username = "{username}"')
+	cmd = f'select 1 from table{idnum} where username = ?'
+	first = (username,)
+	c.execute(cmd, first)
 	bool = c.fetchone()
 	db.commit()
 	db.close()
@@ -123,7 +131,9 @@ def addToStory(idnum, text, username): #adds new entry to story
 		count = entryCount(idnum)
 		title = getTitle(idnum)
 		#print(title)
-		c.execute(f'insert into table{idnum} values({idnum}, "{title}", {count}, "{text}", "{username}")')
+		cmd = f'insert into table{idnum} values({idnum}, ?, {count}, ?, ?)'
+		first = (title, text, username)
+		c.execute(cmd, first)
 	else:
 		print("something has gone wrong - you've already edited the story")
 	db.commit()
