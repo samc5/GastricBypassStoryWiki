@@ -48,5 +48,11 @@ Project goals completed, barring bugs
 samC -- 2022-11-13 15:29
 Fixed error of pages displaying the first entry instead of the latest entry. Barring any issues we are done
 
+samC -- 2022-11-14 13:22ish
+Switched sql input from f-strings to question marks (to sanitize inputs)
+
 annaF -- 2022-11-14 20:21
 Fixed up text box size for user input; updated html styling such that the inputted text can go onto the next line using textarea
+
+samC -- 2022-11-14 21:01
+Fixed requirements.txt, updated instructions for venv creation in launch codes, added roles to readme
