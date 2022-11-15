@@ -30,7 +30,7 @@ Created several HTML templates with placeholders for database information
 Created wide set of functions that create and edit the necessary database information
 
 annaF -- 2022-11-07 13:05
-Pushed HTML files and sqlite files to the repo (Sam had to add all my HTML because we forgot to add each other as collaborators :()
+Pushed HTML files and sqlite files to the repo (Sam had to add all my HTML for me because we forgot to add each other as collaborators :( - the original files can be found in [the-repo-of-storing- (personal repository))
 
 annaF -- 2022-11-09 12:42
 Pulled tester python file from [the-repo-of-storing- (personal repository) to demo the code that we have
@@ -48,5 +48,5 @@ Project goals completed, barring bugs
 samC -- 2022-11-13 15:29
 Fixed error of pages displaying the first entry instead of the latest entry. Barring any issues we are done
 
-AnnaF -- 2022-11-14 20:21
+annaF -- 2022-11-14 20:21
 Fixed up text box size for user input; updated html styling such that the inputted text can go onto the next line using textarea
