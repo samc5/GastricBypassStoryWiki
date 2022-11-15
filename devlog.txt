@@ -21,7 +21,7 @@ samC -- 2022-11-01 21:47
 Seeded team repo with necessary files
 
 samC -- 2022-11-02 22:10
-Uploaded revised head-fake wiki design doc
+Uploaded revised head-fake wiki design doc: clarified language and specified the makeup of tables
 Revised design.pdf -> added help page as stretch goal, minor clarity fixes, component map rewritten for legibility, clarity, logic fixes
 
 samC -- 2022-11-07 00:11
@@ -44,5 +44,6 @@ Set up registry and log-in (connected to the database).
 sadiN -- 2022-11-13 10:45
 Updated flask app to bring everything together - all pages now work in conjunction with database - login/registration, homepage, create story, add to story, view story
 Project goals completed, barring bugs
+
 samC -- 2022-11-13 15:29
 Fixed error of pages displaying the first entry instead of the latest entry. Barring any issues we are done
