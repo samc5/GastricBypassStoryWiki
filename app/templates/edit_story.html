@@ -12,11 +12,12 @@ Gastric Bypass Train: Sam, Anna, Sadi
 
 <body>
 	<h2>{{title}}</h2>
-  <p>{{story}}</p>
+  <p class=centerThis>{{story}}</p>
   <br>
   <!-- allow the user to add a new line of text -->
   <form action="/submission" method="post">
-		<input type="text" name="your line">
+		<textarea type="text" name="your line" class="appearLarger"></textarea>
+		<br>
 		<input type="submit">
 	</form>
   <!--button to get back to homepage-->
