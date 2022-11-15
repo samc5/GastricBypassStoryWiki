@@ -1,5 +1,5 @@
 # P00: Wiki Project by Gastric Bypass Train
-## Sam Cowan (PM, SQL Handler), Anna Fang (Co-Devo, Front-end), Sadi Nirloy (Co-Devo, Flask/Python)
+## Sam Cowan (PM), Anna Fang (Co-Devo), Sadi Nirloy (Co-Devo)
 
 ### Description of website/app:
 - This app shows off the capabilities of a wiki through a fun story-writing game.
