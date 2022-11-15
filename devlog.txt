@@ -39,7 +39,7 @@ samC -- 2022-11-10 00:32
 Wrote the book on installing and running this project
 
 sadiN -- 2022-11-10 12:49
-Set up registry and log-in (connected to the database). 
+Set up registry and log-in (connected to the database).
 
 sadiN -- 2022-11-13 10:45
 Updated flask app to bring everything together - all pages now work in conjunction with database - login/registration, homepage, create story, add to story, view story
@@ -47,3 +47,6 @@ Project goals completed, barring bugs
 
 samC -- 2022-11-13 15:29
 Fixed error of pages displaying the first entry instead of the latest entry. Barring any issues we are done
+
+AnnaF -- 2022-11-14 20:21
+Fixed up text box size for user input; updated html styling such that the inputted text can go onto the next line using textarea
